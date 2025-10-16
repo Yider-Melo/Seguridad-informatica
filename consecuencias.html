@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amenazas en la Nube - Consecuencias</title>
+  <style>
+    body {
+      font-family: "Poppins", Arial, sans-serif;
+      background: #f5f7fb;
+      margin: 0;
+      padding: 40px 20px;
+      color: #1a1a1a;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      padding: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #0056ff;
+      margin-bottom: 30px;
+      font-size: 28px;
+    }
+
+    .threat {
+      margin-bottom: 40px;
+      border-left: 6px solid #0056ff;
+      padding-left: 16px;
+      transition: all 0.3s ease;
+    }
+
+    .threat:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 16px rgba(0,86,255,0.15);
+      border-left-color: #003fcc;
+    }
+
+    .threat h2 {
+      color: #003fcc;
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+
+    .threat h3 {
+      font-size: 17px;
+      color: #333;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+
+    ul li {
+      background: #f0f4ff;
+      border-radius: 10px;
+      padding: 10px 14px;
+      margin-bottom: 8px;
+      line-height: 1.5;
+      border-left: 4px solid #0056ff;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Amenazas en la Nube - Consecuencias</h1>
+
+    <div class="threat">
+      <h2>1. Configuración Incorrecta y Gestión de Cambios Débil</h2>
+      <h3>Consecuencias:</h3>
+      <ul>
+        <li>Exfiltración masiva de datos confidenciales, como información personal, financiera o corporativa.</li>
+        <li>Sanciones legales por incumplimiento de normativas de protección de datos (GDPR, LOPD, etc.).</li>
+        <li>Pérdida de confianza por parte de clientes y socios comerciales.</li>
+        <li>Daño reputacional grave que puede afectar el valor de la marca y la competitividad.</li>
+      </ul>
+    </div>
+
+    <div class="threat">
+      <h2>2. Falta de Gestión de Identidades y Accesos (IAM)</h2>
+      <h3>Consecuencias:</h3>
+      <ul>
+        <li>Escalada de privilegios, permitiendo a usuarios o atacantes acceder a recursos críticos.</li>
+        <li>Movimiento lateral dentro del entorno cloud para comprometer más sistemas.</li>
+        <li>Borrado o modificación accidental o maliciosa de datos y configuraciones.</li>
+        <li>Interrupción de servicios por errores de usuarios con permisos excesivos.</li>
+      </ul>
+    </div>
+
+    <div class="threat">
+      <h2>3. APIs Inseguras</h2>
+      <h3>Consecuencias:</h3>
+      <ul>
+        <li>Exposición de información sensible a través de endpoints vulnerables.</li>
+        <li>Toma de control de servicios cloud mediante explotación de fallos de autenticación.</li>
+        <li>Pérdida de integridad de datos o manipulación de recursos.</li>
+        <li>Incremento de la superficie de ataque, afectando la disponibilidad y seguridad del sistema.</li>
+      </ul>
+    </div>
+
+    <div class="threat">
+      <h2>4. Fuga de Datos (Data Exfiltration)</h2>
+      <h3>Consecuencias:</h3>
+      <ul>
+        <li>Pérdida de propiedad intelectual o secretos comerciales.</li>
+        <li>Multas y sanciones regulatorias por incumplimiento de leyes de protección de datos.</li>
+        <li>Pérdida de clientes y reputación corporativa.</li>
+        <li>Uso indebido de la información robada (fraudes, extorsión o competencia desleal).</li>
+      </ul>
+    </div>
+
+    <div class="threat">
+      <h2>5. Secuestro de Cuenta (Account Hijacking)</h2>
+      <h3>Consecuencias:</h3>
+      <ul>
+        <li>Pérdida total del control del entorno cloud.</li>
+        <li>Borrado de infraestructura, alteración de configuraciones y robo de datos.</li>
+        <li>Uso indebido de recursos (por ejemplo, minería de criptomonedas o envío de spam).</li>
+        <li>Costos financieros elevados y tiempos de recuperación prolongados.</li>
+      </ul>
+    </div>
+
+    <div class="threat">
+      <h2>6. Amenazas Internas</h2>
+      <h3>Consecuencias:</h3>
+      <ul>
+        <li>Destrucción o alteración de información crítica.</li>
+        <li>Interrupción de operaciones y pérdida de productividad.</li>
+        <li>Robo o filtración de datos confidenciales.</li>
+        <li>Desconfianza interna y problemas legales si no existen controles o auditorías adecuadas.</li>
+      </ul>
+    </div>
+
+    <div class="threat">
+      <h2>7. Vulnerabilidades en Contenedores y Orquestadores</h2>
+      <h3>Consecuencias:</h3>
+      <ul>
+        <li>Compromiso total del clúster de aplicaciones (acceso al host o a otros contenedores).</li>
+        <li>Ejecución de código malicioso con privilegios elevados.</li>
+        <li>Interrupción de servicios por ataques al orquestador (Kubernetes, Docker Swarm, etc.).</li>
+        <li>Difusión rápida de malware en entornos distribuidos.</li>
+      </ul>
+    </div>
+
+    <div class="threat">
+      <h2>8. Ataques a la Cadena de Suministro (Supply Chain)</h2>
+      <h3>Consecuencias:</h3>
+      <ul>
+        <li>Introducción de malware o puertas traseras en sistemas legítimos.</li>
+        <li>Persistencia del atacante en el entorno cloud, incluso tras mitigaciones.</li>
+        <li>Compromiso de aplicaciones de terceros y de confianza.</li>
+        <li>Daño reputacional y pérdida de integridad del software distribuido.</li>
+      </ul>
+    </div>
+
+    <div class="threat">
+      <h2>9. Criptografía Débil o Falta de Cifrado</h2>
+      <h3>Consecuencias:</h3>
+      <ul>
+        <li>Exposición de datos sensibles (contraseñas, datos financieros, personales).</li>
+        <li>Riesgo de espionaje o manipulación de información en tránsito.</li>
+        <li>Invalidez de certificaciones de seguridad o cumplimiento normativo.</li>
+        <li>Aumento de la vulnerabilidad ante brechas de seguridad.</li>
+      </ul>
+    </div>
+
+    <div class="threat">
+      <h2>10. Denegación de Servicio (DoS/DDoS) y Gastos Incontrolados</h2>
+      <h3>Consecuencias:</h3>
+      <ul>
+        <li>Indisponibilidad total o parcial de servicios en la nube.</li>
+        <li>Pérdidas económicas significativas debido al aumento automático de recursos.</li>
+        <li>Pérdida de confianza de clientes por la interrupción del servicio.</li>
+        <li>Impacto operativo y financiero prolongado.</li>
+      </ul>
+    </div>
+
+    <footer>
+      <p>© 2025 Seguridad Cloud | Análisis de amenazas y consecuencias</p>
+    </footer>
+  </div>
+</body>
+</html>
