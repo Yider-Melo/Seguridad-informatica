@@ -8,13 +8,86 @@
 </head>
 <body>
     <section>
-        <h1>Vulnerabilidades</h1>
-        <p>Aca va Vulnerabilidades</p>
-    </section>
-    <section>
-        <h1>Amenazas en la nube</h1>
-        <p>Aca va Amenazas en la nube</p>
-    </section>
+        <h1>Vulnerabilidades y amenazas en la web</h1>
+        <p>Las vulnerabilidades web representan debilidades intrínsecas, fallos de diseño o errores de implementación en aplicaciones, servidores, infraestructura o procesos que componen el ecosistema web.
+            Estas deficiencias crean puertas de acceso no autorizado que pueden ser descubiertas y explotadas por actores malintencionados. No son meros "errores de programación", sino brechas sistémicas que comprometen la integridad, 
+            confidencialidad y disponibilidad de los sistemas.</p>
+        <p>Las amenazas web constituyen acciones, eventos o actividades maliciosas deliberadas que buscan explotar vulnerabilidades existentes para comprometer sistemas web.
+            Representan la materialización del riesgo potencial y encarnan la intencionalidad detrás de los ataques cibernéticos.</p>    
+    
+<section class="owasp-top10">
+    <h1>OWASP Top 10 - Vulnerabilidades Web Críticas</h1>
+    
+    <div class="vulnerability">
+        <h2>1. Fallos de Control de Acceso (Broken Access Control)</h2>
+        <p><strong>¿Qué es?</strong> Fallos que permiten a los usuarios actuar fuera de sus permisos intencionados (ej.: ver datos de otros usuarios, modificar información, acceder a funciones de administrador).</p>
+        <p><strong>Ataque Relacionado:</strong> Escalada de privilegios vertical/horizontal.</p>
+        <p><strong>Ejemplo:</strong> Cambiar el ID de usuario en la URL de miperfil.com/user?id=123 a miperfil.com/user?id=124 para ver la cuenta de otra persona.</p>
+    </div>
+
+    <div class="vulnerability">
+        <h2>2. Fallos Criptográficos (Cryptographic Failures)</h2>
+        <p><strong>¿Qué es?</strong> Fallos relacionados con la protección de datos sensibles. Anteriormente se llamaba "Exposición de Datos Sensibles".</p>
+        <p><strong>Ataque Relacionado:</strong> Robo de información.</p>
+        <p><strong>Ejemplo:</strong> Transmitir contraseñas o números de tarjetas de crédito sin cifrar (HTTP en lugar de HTTPS), o usar algoritmos de cifrado débiles o obsoletos.</p>
+    </div>
+
+    <div class="vulnerability">
+        <h2>3. Inyección (Injection)</h2>
+        <p><strong>¿Qué es?</strong> Cuando un atacante puede enviar datos hostiles a un intérprete (como una base de datos) y este los ejecuta.</p>
+        <p><strong>Ataque Relacionado:</strong> Inyección SQL (la más común), Inyección OS Command, LDAP Injection.</p>
+        <p><strong>Ejemplo:</strong> En un formulario de login, escribir ' OR '1'='1'-- para burlar la autenticación y acceder como administrador.</p>
+    </div>
+
+    <div class="vulnerability">
+        <h2>4. Diseño Inseguro (Insecure Design)</h2>
+        <p><strong>¿Qué es?</strong> Fallos que surgen por una falta de prácticas de seguridad durante la fase de diseño de la aplicación. Es un riesgo nuevo en el Top 10.</p>
+        <p><strong>Ataque Relacionado:</strong> Depende del fallo de diseño.</p>
+        <p><strong>Ejemplo:</strong> Un flujo de recuperación de contraseña que se basa en preguntas de seguridad cuya respuesta es fácil de adivinar o investigar (¿Cuál es el nombre de tu mascota?).</p>
+    </div>
+
+    <div class="vulnerability">
+        <h2>5. Configuración de Seguridad Incorrecta (Security Misconfiguration)</h2>
+        <p><strong>¿Qué es?</strong> Configuraciones inseguras en cualquier parte de la pila tecnológica (servidor web, base de datos, frameworks, etc.).</p>
+        <p><strong>Ataque Relacionado:</strong> Acceso no autorizado.</p>
+        <p><strong>Ejemplo:</strong> Dejar los directorios del servidor con listado activo (se pueden ver todos los archivos), usar contraseñas por defecto, o tener páginas de error que revelen información sensible (versiones de software).</p>
+    </div>
+
+    <div class="vulnerability">
+        <h2>6. Componentes Vulnerables y Obsoletos (Vulnerable and Outdated Components)</h2>
+        <p><strong>¿Qué es?</strong> Usar librerías, frameworks o otro software con vulnerabilidades conocidas.</p>
+        <p><strong>Ataque Relacionado:</strong> Explotación de vulnerabilidades públicas.</p>
+        <p><strong>Ejemplo:</strong> Una aplicación que usa una versión antigua de jQuery o de un CMS como WordPress con plugins desactualizados que tienen vulnerabilidades explotables.</p>
+    </div>
+
+    <div class="vulnerability">
+        <h2>7. Fallos de Identificación y Autenticación (Identification and Authentication Failures)</h2>
+        <p><strong>¿Qué es?</strong> Fallos en los mecanismos de login y gestión de sesiones.</p>
+        <p><strong>Ataque Relacionado:</strong> Robo de cuentas, suplantación de identidad.</p>
+        <p><strong>Ejemplo:</strong> Credenciales por defecto ("admin/admin"), permitir contraseñas débiles, no invalidar sesiones correctamente después del logout, o ser vulnerable a ataques de fuerza bruta.</p>
+    </div>
+
+    <div class="vulnerability">
+        <h2>8. Fallos en el Software y la Integridad de los Datos (Software and Data Integrity Failures)</h2>
+        <p><strong>¿Qué es?</strong> Fallos que asumen que el software o los datos de origen son confiables sin verificar su integridad.</p>
+        <p><strong>Ataque Relacionado:</strong> Ataques de la cadena de suministro (Supply Chain Attacks).</p>
+        <p><strong>Ejemplo:</strong> Una aplicación que actualiza automáticamente desde un repositorio no seguro, o que usa plugins/librerías de fuentes no verificadas que han sido comprometidas.</p>
+    </div>
+
+    <div class="vulnerability">
+        <h2>9. Fallos en el Registro y Monitoreo de la Seguridad (Security Logging and Monitoring Failures)</h2>
+        <p><strong>¿Qué es?</strong> No registrar adecuadamente las actividades de seguridad o no monitorearlas para detectar incidentes.</p>
+        <p><strong>Consecuencia:</strong> Los ataques pasan desapercibidos durante mucho tiempo.</p>
+        <p><strong>Ejemplo:</strong> No tener logs de los intentos de login fallidos, lo que impide detectar un ataque de fuerza bruta.</p>
+    </div>
+
+    <div class="vulnerability">
+        <h2>10. Falsificación de Peticiones en Sitios Cruzados (SSRF - Server-Side Request Forgery)</h2>
+        <p><strong>¿Qué es?</strong> Cuando una aplicación web es engañada para que realice una petición a una dirección interna o externa no intencionada.</p>
+        <p><strong>Ataque Relacionado:</strong> Acceso a sistemas internos.</p>
+        <p><strong>Ejemplo:</strong> Una aplicación que permite al usuario introducir una URL para obtener una vista previa de un enlace, pero en su lugar es manipulada para acceder a http://localhost/admin (la consola de administración interna del servidor).</p>
+    </div>
+</section>
     
 </body>
 </html>
